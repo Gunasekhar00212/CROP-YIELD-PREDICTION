@@ -4,12 +4,12 @@ import numpy as np
 import pickle
 
 # Load the model and other components
-model = pickle.load(open("PKL files/yield_model.pkl", "rb"))
-scaler = pickle.load(open("PKL files/scaler.pkl", "rb"))
-X_columns = pickle.load(open("PKL files/X_columns.pkl", "rb"))
-global_area_lambda = pickle.load(open("PKL files/global_area_lambda.pkl", "rb"))
-global_shift = pickle.load(open("PKL files/global_shift.pkl", "rb"))
-yield_lambda = pickle.load(open("PKL files/yield_lambda.pkl", "rb"))
+model = pickle.load(open("yield_model.pkl", "rb"))
+scaler = pickle.load(open("scaler.pkl", "rb"))
+X_columns = pickle.load(open("X_columns.pkl", "rb"))
+global_area_lambda = pickle.load(open("global_area_lambda.pkl", "rb"))
+global_shift = pickle.load(open("global_shift.pkl", "rb"))
+yield_lambda = pickle.load(open("yield_lambda.pkl", "rb"))
 
 # Box-Cox transformations
 def boxcox_transform(val, lam):
