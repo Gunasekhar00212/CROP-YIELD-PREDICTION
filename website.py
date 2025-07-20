@@ -2,14 +2,25 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-
 # Load the model and other components
-model = pickle.load(open("yield_model.pkl", "rb"))
-scaler = pickle.load(open("scaler.pkl", "rb"))
-X_columns = pickle.load(open("X_columns.pkl", "rb"))
-global_area_lambda = pickle.load(open("global_area_lambda.pkl", "rb"))
-global_shift = pickle.load(open("global_shift.pkl", "rb"))
-yield_lambda = pickle.load(open("yield_lambda.pkl", "rb"))
+import os
+
+
+base_path = os.path.dirname(__file__)
+
+with open(os.path.join(base_path, "yield_model.pkl"), "rb") as f:
+    model = pickle.load(f)
+with open(os.path.join(base_path, "scaler.pkl"), "rb") as f:
+    scaler = pickle.load(f)
+with open(os.path.join(base_path, "X_columns.pkl"), "rb") as f:
+    X_columns = pickle.load(f)
+with open(os.path.join(base_path, "global_area_lambda.pkl"), "rb") as f:
+    global_area_lambda = pickle.load(f)
+with open(os.path.join(base_path, "global_shift.pkl"), "rb") as f:
+    global_shift = pickle.load(f)
+with open(os.path.join(base_path, "yield_lambda.pkl"), "rb") as f:
+    yield_lambda = pickle.load(f)
+
 
 # Box-Cox transformations
 def boxcox_transform(val, lam):
