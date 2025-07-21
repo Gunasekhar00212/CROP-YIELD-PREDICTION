@@ -4,7 +4,7 @@
 This project predicts **agricultural crop yield** of the **Andhra Pradesh** using machine learning models based on various input features like district, crop, season, and area. The model is trained on real-world datasets, focusing on data from **Andhra Pradesh**.
 
 ### 🔗 Live Demo  
-👉 [Check the Web App Here](https://crop-yield-prediction-1kzu.onrender.com)
+👉 [Check the Web App Here](https://guna00-crop-yield-prediction.hf.space)
 
 ---
 
